@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>RabbitMQ</h2>
+
+@using (Html.BeginForm("EnviarMensaje", "Home"))
+{
+    <div class="row">
+        <label for="cola">Seleccione cola</label>
+        <select name="cola">
+            <option>cola1</option>
+            <option>cola2</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label for ="mensaje">Mensaje</label>
+        @Html.TextBox("mensaje")
+    </div>
+
+
+     <div class="row">
+        <input type = "submit" value="Enviar" />
+     </div>
+}
